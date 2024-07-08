@@ -63,7 +63,7 @@ dependencies {
     implementation("androidx.compose.material3:material3:1.0.0-alpha02")
     implementation("com.android.support:design:28.0.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.google.code.gson:gson:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("com.google.android.material:material:1.4.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")

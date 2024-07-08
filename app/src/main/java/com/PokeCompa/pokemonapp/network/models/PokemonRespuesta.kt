@@ -3,6 +3,7 @@ package com.PokeCompa.pokemonapp.network.models
 import com.google.gson.annotations.SerializedName
 
 class PokemonRespuesta {
+
     private var count : Int = 0
     private lateinit var next: String
     private lateinit var previus: String
