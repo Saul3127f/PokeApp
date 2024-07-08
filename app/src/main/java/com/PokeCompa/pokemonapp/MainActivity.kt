@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.PokeCompa.pokemonapp.ui.theme.PokemonAppTheme
 
 class MainActivity : ComponentActivity() {
+    private lateinit var retrofit: Retrofit
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,7 +28,10 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+
+        retrofit = new Retrofit.builder().baseUrl
     }
+
 }
 
 @Composable
