@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class PokemonLoad : PokeAPI {
     constructor(){
-        val rgit etrofit = Retrofit.Builder()
+        val retrofit = Retrofit.Builder()
             .baseUrl("https://pokeapi.co/api/v2/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()

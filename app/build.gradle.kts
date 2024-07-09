@@ -61,10 +61,6 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics:1.0.5")
     implementation("androidx.compose.ui:ui-tooling-preview:1.0.5")
     implementation("androidx.compose.material3:material3:1.0.0-alpha02")
-    implementation("com.android.support:design:28.0.0")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("androidx.cardview:cardview:1.0.0")
     implementation("com.google.android.material:material:1.4.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("com.google.code.gson:gson:2.8.8")
@@ -74,11 +70,19 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.activity)
+
+    // Retrofit y Gson
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // Pruebas
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.5")
+
+    // Debug y pruebas de Compose
     debugImplementation("androidx.compose.ui:ui-tooling:1.0.5")
     debugImplementation("androidx.compose.ui:ui-test-manifest:1.0.5")
 }

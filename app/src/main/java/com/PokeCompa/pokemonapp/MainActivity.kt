@@ -11,7 +11,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.PokeCompa.pokemonapp.network.PokemonLoad
+import com.PokeCompa.pokemonapp.network.models.PokemonRespuesta
 import com.PokeCompa.pokemonapp.ui.theme.PokemonAppTheme
+import retrofit2.Response
+import retrofit2.Call
+import retrofit2.Callback
+import android.util.Log
+import com.PokeCompa.pokemonapp.utils.Constant
+import retrofit2.http.Tag
 
 class MainActivity : ComponentActivity() {
 
@@ -28,6 +36,20 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        val constant = Constant()
+        var load = PokemonLoad()
+        var call: Call<PokemonRespuesta> = load.obtenerListaPokemon()
+
+        call.enqueue(object : Callback<PokemonRespuesta> {
+            override fun onResponse(call: Call<PokemonRespuesta>, response: Response<PokemonRespuesta>) {
+                Log.e(constant.DEBUG, "" )
+            }
+
+            override fun onFailure(call: Call<PokemonRespuesta>, t: Throwable) {
+                val errorMessage = t.message
+                print("Error: $errorMessage")
+            }
+        })
     }
 
 }
